@@ -1,0 +1,28 @@
+apiVersion: extension/v1beta1
+king: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  lables:
+    app: grafana-sandbox
+    chart: grafana-sandbox
+    heritage: grafana-sandbox
+    release: grafana-sandbox
+  name: grafana-sandbox
+  namespace: gdci
+
+spec:
+  rules:
+  - host: gdci.host.io
+    http: 
+      paths:
+      - backend:
+          serviceName: grafana
+          servicePort: 3000
+        path: /grafana/
+
+status:
+  loadBalancer:
+    ingress:
+    - ip: 182.195.128.141
+    - ip: 182.195.135.120
