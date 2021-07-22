@@ -9,5 +9,5 @@ metadata:
     app.kubernetes.io/instance: grafana
     app.kubernetes.io/version: "7.5.5"
     app.kubernetes.io/managed-by: kubectl
-  name: grafana-clusterrole
+  name: grafana-clusterroleeeee
 rules: []
